@@ -18,7 +18,7 @@ def main():
     TELEGRAM_CHAT_MESSAGE = get_env_var("TELEGRAM_CHAT_MESSAGE")
 
     try:
-        response = requests.post(f'https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendDocument', json={'chat_id': TELEGRAM_CHAT_ID, 'document': TELEGRAM_FILE_NAME, 'caption': TELEGRAM_CHAT_MESSAGE})
+        response = requests.post(f'https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendDocument', data={'chat_id': TELEGRAM_CHAT_ID, 'parse_mode': "MarkdownV2", 'caption': TELEGRAM_CHAT_MESSAGE}, files=open(TELEGRAM_FILE_NAME,'rb'), stream=True)
         print(response.text)
     except Exception as e:
         print(e)
