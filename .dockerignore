@@ -1,0 +1,6 @@
+# exclude all...
+**
+
+# ...except required
+!/requirements.txt
+!/telegram_file_sender
