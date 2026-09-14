@@ -1,19 +1,17 @@
 [project]
 name = "telegram-file-sender"
-version = "1.0.0"
+version = "0.1.6"
 description = "Docker image for sending files via Telegram Bot API"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = [
-  "requests>=2.32,<3.0"
-]
+dependencies = [ "requests>=2.32,<3.0" ]
 license = "Apache-2.0"
 license-files = [ "LICENSE" ]
 keywords = [ "telegram", "bot", "docker" ]
 classifiers = [
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.14",
-  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3 :: Only"
 ]
 
   [[project.authors]]
