@@ -1,0 +1,107 @@
+[project]
+name = "telegram-file-sender"
+version = "1.0.0"
+description = "Docker image for sending files via Telegram Bot API"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+  "requests>=2.32,<3.0"
+]
+license = "Apache-2.0"
+license-files = [ "LICENSE" ]
+keywords = [ "telegram", "bot", "docker" ]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+  [[project.authors]]
+  name = "Dmitrii Safronov"
+
+  [project.urls]
+  Source = "https://github.com/disafronov/telegram-file-sender"
+  Issues = "https://github.com/disafronov/telegram-file-sender/issues"
+
+[dependency-groups]
+dev = [
+  "black>=26.5.1",
+  "isort>=5.12.0",
+  "flake8>=6.0.0",
+  "flake8-pyproject>=1.2.3",
+  "pytest>=9.1.0",
+  "pytest-cov>=4.1.0",
+  "mypy>=1.19,<2.0",
+  "bandit>=1.7.5",
+  "pre-commit>=4.6.0",
+  "vulture>=2.16",
+  "pip-audit>=2.10.1"
+]
+
+[tool.black]
+line-length = 88
+include = "\\.pyi?$"
+target-version = [ "py314" ]
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = [ "E203", "W503" ]
+exclude = [ ".venv", "htmlcov" ]
+
+[tool.mypy]
+files = [ "telegram_file_sender" ]
+exclude = "(^tests/|^tests\\.py$|.*/tests/|^manage\\.py$)"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[tool.bandit]
+exclude_dirs = [ ".venv", "htmlcov", "tests" ]
+
+[tool.coverage.run]
+source = [ "telegram_file_sender" ]
+omit = [ ".venv/*", "tests/*" ]
+branch = true
+
+[tool.coverage.report]
+fail_under = 100
+exclude_lines = [
+  "raise AssertionError",
+  "raise NotImplementedError",
+  "if TYPE_CHECKING:",
+  "if __name__ == .__main__.:",
+  "@(abc\\.)?abstractmethod",
+  "@overload",
+  "\\.\\.\\.$",
+  "pragma: no cover"
+]
+show_missing = true
+skip_covered = false
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.vulture]
+min_confidence = 80
+paths = [ "telegram_file_sender" ]
+exclude = [ ".venv", "htmlcov", "*/tests/*" ]
+ignore_names = [ "cls" ]
+
+[tool.pytest.ini_options]
+python_files = [ "test_*.py" ]
+pythonpath = [ "." ]
+addopts = "--strict-markers --cov --cov-report=term-missing"
+testpaths = [ "tests" ]
+filterwarnings = [ "ignore::DeprecationWarning" ]
