@@ -1,2 +1,33 @@
-.venv
-__pycache__
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual env
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Tests
+htmlcov/
+.coverage
+
+# Tool caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
