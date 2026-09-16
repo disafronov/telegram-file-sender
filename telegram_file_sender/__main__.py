@@ -43,7 +43,6 @@ def main() -> int:
                 f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendDocument",
                 data={
                     "chat_id": TELEGRAM_CHAT_ID,
-                    "parse_mode": "MarkdownV2",
                     "caption": TELEGRAM_CHAT_MESSAGE,
                 },
                 files={"document": document},
