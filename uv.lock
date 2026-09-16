@@ -3077,7 +3077,7 @@ version = "5.9.1"
 
 [[package]]
 name = "telegram-file-sender"
-version = "0.1.6"
+version = "0.1.7"
 
   [package.source]
   virtual = "."

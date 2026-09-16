@@ -1,6 +1,6 @@
 [project]
 name = "telegram-file-sender"
-version = "0.1.6"
+version = "0.1.7"
 description = "Docker image for sending files via Telegram Bot API"
 readme = "README.md"
 requires-python = ">=3.14"
