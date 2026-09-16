@@ -33,6 +33,9 @@ def main() -> int:
         logger.error("%s", exc)
         return 1
 
+    # Mask token for safe logging (hide credential from logs)
+    masked_token = "*" * len(TELEGRAM_BOT_TOKEN)
+
     try:
         with open(TELEGRAM_FILE_NAME, "rb") as document:
             logger.info("Sending document to chat %s", TELEGRAM_CHAT_ID)
@@ -54,7 +57,9 @@ def main() -> int:
         # Any failure must result in a non-zero exit code, otherwise the
         # container/CI run would report success although the file was not sent.
         # OSError covers open() failures, RequestException covers API failures.
-        logger.error("Failed to send document: %s", exc)
+        # Mask the token in error logs to avoid leaking credentials.
+        masked_exc = str(exc).replace(TELEGRAM_BOT_TOKEN, masked_token)
+        logger.error("Failed to send document: %s", masked_exc)
         return 1
 
     return 0
