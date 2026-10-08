@@ -14,3 +14,5 @@ docker run --rm \
   -e TELEGRAM_FILE_NAME="FullPathToYourFile" \
   ghcr.io/dmitriysafronov/telegram-file-sender:latest
 ```
+
+<!-- refactor: deps -->
