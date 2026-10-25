@@ -20,8 +20,7 @@ jobs:
       - uses: astral-sh/setup-uv@v7
         with:
           enable-cache: true
+          python-version: ${{ matrix.python-version }}
           cache-suffix: ${{ matrix.python-version }}
       - name: Audit dependencies
         run: make audit
-        env:
-          UV_PYTHON: ${{ matrix.python-version }}
