@@ -1,0 +1,27 @@
+---
+name: Audit
+"on":
+  pull_request:
+    branches: [main, release]
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.14"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          cache-suffix: ${{ matrix.python-version }}
+      - name: Audit dependencies
+        run: make audit
+        env:
+          UV_PYTHON: ${{ matrix.python-version }}
