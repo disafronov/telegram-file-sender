@@ -1,3 +1,5 @@
+## [0.1.11](https://github.com/disafronov/telegram-file-sender/compare/v0.1.10...v0.1.11) (2026-10-25)
+
 ## [0.1.10](https://github.com/disafronov/telegram-file-sender/compare/v0.1.9...v0.1.10) (2026-10-25)
 
 ### Bug Fixes
