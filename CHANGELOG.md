@@ -1,3 +1,9 @@
+## [0.1.13](https://github.com/disafronov/telegram-file-sender/compare/v0.1.12...v0.1.13) (2026-10-25)
+
+### Bug Fixes
+
+* **release:** sign generated releases as GitHub Actions ([fee2339](https://github.com/disafronov/telegram-file-sender/commit/fee233927254b277c155b1359c64e046bd61871e))
+
 ## [0.1.12](https://github.com/disafronov/telegram-file-sender/compare/v0.1.11...v0.1.12) (2026-10-25)
 
 ## [0.1.11](https://github.com/disafronov/telegram-file-sender/compare/v0.1.10...v0.1.11) (2026-10-25)
