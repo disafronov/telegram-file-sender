@@ -50,7 +50,7 @@ posts the file to the Telegram Bot API `sendDocument` endpoint and exits with
   `make dead-code` + `make audit` on push.
 - **Conventional commits** enforced via `conventional-pre-commit` hook on
   commit messages.
-- **Semantic release**: `main` branch -> stable releases (no prerelease cycle).
+- **Semantic release**: `main` branch -> stable releases (no prerelease cycle or `release` branch). This standalone policy overrides the shared image default.
 - **Docker**: image runs as a non-root `appuser`; the file to send is mounted
   read-only and passed via `TELEGRAM_FILE_NAME`; deps come from `uv.lock`
   (`uv sync --frozen`), dev group is excluded.
