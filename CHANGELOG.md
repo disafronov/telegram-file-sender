@@ -1,3 +1,9 @@
+## [0.1.14](https://github.com/disafronov/telegram-file-sender/compare/v0.1.13...v0.1.14) (2026-10-26)
+
+### Bug Fixes
+
+* align semantic-release policy and committer sign-off ([c0c0b84](https://github.com/disafronov/telegram-file-sender/commit/c0c0b84d02cd96aa02b559927499ec1935742af4))
+
 ## [0.1.13](https://github.com/disafronov/telegram-file-sender/compare/v0.1.12...v0.1.13) (2026-10-25)
 
 ### Bug Fixes
