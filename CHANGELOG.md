@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/disafronov/telegram-file-sender/compare/v1.0.0...v1.0.1) (2026-11-02)
+
+### Code Refactoring
+
+* deps ([5a94552](https://github.com/disafronov/telegram-file-sender/commit/5a94552d2d07ccb8982f4fbf462c650c6d0b9781))
+
 ## [1.0.0](https://github.com/disafronov/telegram-file-sender/compare/v0.1.14...v1.0.0) (2026-11-02)
 
 ### ⚠ BREAKING CHANGES
