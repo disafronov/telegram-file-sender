@@ -1,3 +1,15 @@
+## [1.0.0](https://github.com/disafronov/telegram-file-sender/compare/v0.1.14...v1.0.0) (2026-11-02)
+
+### ⚠ BREAKING CHANGES
+
+* The release branch and its automatic synchronization to main are no longer supported.
+
+Signed-off-by: Dmitrii Safronov <zimniy@cyberbrain.cc>
+
+### Features
+
+* retire legacy release branch workflow ([62565f4](https://github.com/disafronov/telegram-file-sender/commit/62565f44bbbbf6604dbbddf2a4f3dd16437b2a04))
+
 ## [0.1.14](https://github.com/disafronov/telegram-file-sender/compare/v0.1.13...v0.1.14) (2026-10-26)
 
 ### Bug Fixes
