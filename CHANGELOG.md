@@ -1,3 +1,9 @@
+## [1.0.2-rc.2](https://github.com/disafronov/telegram-file-sender/compare/v1.0.2-rc.1...v1.0.2-rc.2) (2026-11-20)
+
+### Code Refactoring
+
+* deps ([8c4f207](https://github.com/disafronov/telegram-file-sender/commit/8c4f207b6f9127ba1887c8a8db92da5824a74ca9))
+
 ## [1.0.2-rc.1](https://github.com/disafronov/telegram-file-sender/compare/v1.0.1...v1.0.2-rc.1) (2026-11-20)
 
 ### Code Refactoring
