@@ -15,4 +15,4 @@ docker run --rm \
   ghcr.io/dmitriysafronov/telegram-file-sender:latest
 ```
 
-<!-- refactor: deps 3 -->
+<!-- refactor: deps 4 -->
